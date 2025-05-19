@@ -6,9 +6,15 @@
 | Muhammad Davin Aulia Risky | 5025231275 | Otomata (E) | Kelompok 5 |
 | Muhammad Aditya Handrian | 5025231292 | Otomata (E) | Kelompok 5 |
 
-> Penjelasan mengenai CYK algorithm dan cara kerjanya
+---
 
-> Cara menggunakan program kalian
+### Penjelasan mengenai CYK algorithm dan cara kerjanya
+
+Lorem ipsum
+
+---
+
+### Cara menggunakan program kalian
 
 Buat file dengan nama `input.json` lalu sesuaikan isi file dengan format. File json berisi:
 1. Non-terminal symbols or placeholder
@@ -18,7 +24,9 @@ Buat file dengan nama `input.json` lalu sesuaikan isi file dengan format. File j
 
 Contoh penulisannya dapat dilihat di bawah ini.
 
-> Sample input dan sample output
+---
+
+### Sample input dan sample output
 
 Output `True` bila Grammar yang ada dapat membentuk string yang dicek.
 
