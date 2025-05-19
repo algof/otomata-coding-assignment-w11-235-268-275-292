@@ -1,0 +1,15 @@
+{
+  "non_terminals": ["S", "A", "B", "C", "D", "E", "F"],
+  "terminals": ["a", "b", "c"],
+  "production_rules": {
+    "S": [["A", "B"]],
+    "A": [["C", "D"], ["C", "F"]],
+    "B": [["c"], ["E", "B"]],
+    "C": [["a"]],
+    "D": [["b"]],
+    "E": [["c"]],
+    "F": [["A", "D"]]
+  },
+  "start_symbol": "S",
+  "sentence": ["a", "a", "a", "b", "b", "b", "c", "c"]
+}
