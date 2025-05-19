@@ -7,9 +7,9 @@ def cykParse(grammar):
     start_symbol = grammar["start_symbol"]
     w = grammar["sentence"]
     
-    n = len(w)
+    n = len(w) # n = banyak elemen dalam string w
     
-    # Inisialisasi tabel CYK
+    # Inisialisasi tabel CYK sebanyak n kali n
     T = [[set() for _ in range(n)] for _ in range(n)]
 
     # Basis: isian diagonal (produksi langsung dari terminal)

@@ -63,6 +63,8 @@ True
 
 Input 2 :
 
+`input_2.json`
+
 ```json
 {
   "non_terminals": ["S", "A", "B", "C", "D", "E", "F"],
