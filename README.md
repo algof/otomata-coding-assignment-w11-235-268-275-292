@@ -22,16 +22,20 @@ def cykParse(grammar):
     n = len(w) # n = banyak elemen dalam string w
     
     # Inisialisasi tabel CYK sebanyak n kali n
-    T = [[set() for _ in range(n)] for _ in range(n)]
+    T = [[set() for _ in range(n)] for _ in range(n)]```
 
-    # Basis: isian diagonal (produksi langsung dari terminal)
+Kode di atas mengekstrak komponen grammar dari parameter masukan dan membuat tabel CYK (matriks T) berukuran n×n, di mana n adalah panjang kalimat yang akan diparsing. Setiap sel T[i][j] adalah himpunan (set) yang akan berisi simbol non-terminal yang dapat menghasilkan substring dari posisi i hingga j
+
+   ```# Basis: isian diagonal (produksi langsung dari terminal)
     for j in range(n):
         for lhs, rule_list in rules.items():
             for rhs in rule_list:
                 if len(rhs) == 1 and rhs[0] == w[j]:
-                    T[j][j].add(lhs)
+                    T[j][j].add(lhs)```
 
-        # Aturan produksi untuk span yang lebih panjang
+Bagian ini mengisi elemen diagonal tabel (T[j][j]) dengan simbol non-terminal yang dapat langsung menghasilkan terminal pada posisi j dalam kalimat. Ini sesuai dengan langkah pertama algoritma CYK standard, tetapi menggunakan indeks berbasis
+
+       ```# Aturan produksi untuk span yang lebih panjang
         for i in range(j, -1, -1):
             for k in range(i, j):
                 for lhs, rule_list in rules.items():
@@ -39,15 +43,19 @@ def cykParse(grammar):
                         if len(rhs) == 2:
                             B, C = rhs
                             if B in T[i][k] and C in T[k + 1][j]:
-                                T[i][j].add(lhs)
+                                T[i][j].add(lhs)```
 
-    # Apakah simbol awal dapat menghasilkan seluruh kalimat?
+Bagian ini adalah inti dari algoritma CYK. Untuk setiap substring w[i...j], kode memeriksa apakah ada aturan produksi A → BC di mana B dapat menghasilkan substring w[i...k] dan C dapat menghasilkan substring w[k+1...j]. Jika ada, maka A ditambahkan ke sel T[i][j]
+
+```# Apakah simbol awal dapat menghasilkan seluruh kalimat?
     if start_symbol in T[0][n - 1]:
         print("True")
     else:
-        print("False")
+        print("False")```
 
-# Load grammar dari file JSON
+Bagian terakhir memeriksa apakah simbol awal (start_symbol) terdapat dalam sel T[n-1], yang merepresentasikan apakah simbol awal dapat menghasilkan seluruh kalimat. Jika ya, berarti kalimat dapat diterima oleh grammar
+
+```# Load grammar dari file JSON
 with open("input.json", "r") as f:
     grammar_data = json.load(f)
 
