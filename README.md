@@ -20,6 +20,10 @@ Contoh penulisannya dapat dilihat di bawah ini.
 
 > Sample input dan sample output
 
+Output `True` bila Grammar yang ada dapat membentuk string yang dicek.
+
+Output `False` bila Grammar yang ada tidak dapat membentuk string yang dicek.
+
 Input 1 :
 
 `input.json`
