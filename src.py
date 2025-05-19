@@ -36,7 +36,7 @@ def cykParse(grammar):
         print("False")
 
 # Load grammar dari file JSON
-with open("input_2.json", "r") as f:
+with open("input.json", "r") as f:
     grammar_data = json.load(f)
 
 cykParse(grammar_data)

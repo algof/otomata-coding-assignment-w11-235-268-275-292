@@ -14,7 +14,7 @@ Lorem ipsum
 
 ---
 
-### Cara menggunakan program kalian
+### Cara menggunakan program
 
 Buat file dengan nama `input.json` lalu sesuaikan isi file dengan format. File json berisi:
 1. Non-terminal symbols or placeholder
@@ -22,7 +22,9 @@ Buat file dengan nama `input.json` lalu sesuaikan isi file dengan format. File j
 3. Production rules to create symbols sequence
 4. Start symbol (where to start producing sentences).
 
-Contoh penulisannya dapat dilihat di bawah ini.
+Contoh penulisannya dapat dilihat di bagian sample input dan sample output.
+
+Jalankan file.
 
 ---
 
