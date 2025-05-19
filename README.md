@@ -16,9 +16,11 @@ Buat file dengan nama `input.json` lalu sesuaikan isi file dengan format. File j
 3. Production rules to create symbols sequence
 4. Start symbol (where to start producing sentences).
 
+Contoh penulisannya dapat dilihat di bawah ini.
+
 > Sample input dan sample output
 
-Input :
+Input 1 :
 
 `input.json`
 
@@ -39,7 +41,33 @@ Input :
 }
 ```
 
-Output : 
+Output 1 : 
+
+```txt
+True
+```
+
+Input 2 :
+
+```json
+{
+  "non_terminals": ["S", "A", "B", "C", "D", "E", "F"],
+  "terminals": ["a", "b", "c"],
+  "production_rules": {
+    "S": [["A", "B"]],
+    "A": [["C", "D"], ["C", "F"]],
+    "B": [["c"], ["E", "B"]],
+    "C": [["a"]],
+    "D": [["b"]],
+    "E": [["c"]],
+    "F": [["A", "D"]]
+  },
+  "start_symbol": "S",
+  "sentence": ["a", "a", "a", "b", "b", "b", "c", "c"]
+}
+```
+
+Output 2 :
 
 ```txt
 True
