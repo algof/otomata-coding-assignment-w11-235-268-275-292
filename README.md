@@ -10,6 +10,32 @@
 
 ### Penjelasan mengenai CYK algorithm dan cara kerjanya
 
+#### Deskripsi CYK Algorithm
+Algoritma Cocke-Younger-Kasami (CYK) adalah sebuah algoritma parsing yang digunakan dalam komputasi bahasa untuk menentukan apakah sebuah string yang diberikan dapat dibentukan menggunakan Context-Free Grammar (CFG) yang bagian dari Chomsky Normal Form (CNF). Sebelum memasuki ke cara kerja dari algoritma CYK, ada beberapa aturan dan terminologi CFG yang harus dipahami. Berikut aturan dan terminologi dari CFG:
+| Aturan | Cara membaca |
+| --- | --- |
+| S --> 𝜖 | S dapat merepresentasikan string kosong |
+| A --> a | Non-Terminal A dapat merepresentasikan karakter a |
+| A --> BC | Non-Terminal A dapat merepresentasikan Non-Terminal BC (Dua Non-Terminal) |
+
+| Simbol | Definisi |
+| --- | --- |
+| S | String awal (Biasanya disimbolkan S) |
+| A | Variabel bebas atau Non-Terminal (Disimbolkan dengan karakter alphabet dalam bentuk kapital) |
+| a | Karakter bebas atau Terminal (Disimbolkan dengan karakter huruf kecil alphabet) |
+| 𝜖 | String kosong (seperti lambda pada regex) |
+
+#### Cara Kerja CYK Algorithm
+
+Berikut langkah-langkah algoritma CYK secara deskriptif:
+1. Membagi string menjadi substring terkecil yaitu berupa karakter.
+2. Menentukan setiap substring dalam bentuk Non-Terminal.
+3. Gabungkan dua substring untuk membentuk substring baru.
+4. Tentukan kembali substring baru dalam bentuk Non-Terminal.
+5. Penentuan substring dalam bentuk Non-Terminal dilakukan terus-menerus hingga mencapai substring terbesar atau string awal. 
+
+#### Penjelasan Kode
+
 ```python
 import json
 
