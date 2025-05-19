@@ -23,7 +23,7 @@ Algoritma Cocke-Younger-Kasami (CYK) adalah sebuah algoritma parsing yang diguna
 | S | String awal (Biasanya disimbolkan S) |
 | A | Variabel bebas atau Non-Terminal (Disimbolkan dengan karakter alphabet dalam bentuk kapital) |
 | a | Karakter bebas atau Terminal (Disimbolkan dengan karakter huruf kecil alphabet) |
-| 𝜖 | String kosong (seperti lambda pada regex) |
+| 𝜖 | String kosong seperti λ pada regex |
 
 #### Cara Kerja CYK Algorithm
 
