@@ -27,12 +27,12 @@ Algoritma Cocke-Younger-Kasami (CYK) adalah sebuah algoritma parsing yang diguna
 
 #### Cara Kerja CYK Algorithm
 
-Berikut langkah-langkah algoritma CYK secara deskriptif:
-1. Membagi string menjadi substring terkecil yaitu berupa karakter.
-2. Menentukan setiap substring dalam bentuk Non-Terminal.
-3. Gabungkan dua substring untuk membentuk substring baru.
-4. Tentukan kembali substring baru dalam bentuk Non-Terminal.
-5. Penentuan substring dalam bentuk Non-Terminal dilakukan terus-menerus hingga mencapai substring terbesar atau string awal. 
+Setelah memahami aturan dan terminologi dari CFG, algoritma CYK akan menerapkan aturan-aturan tersebut tetapi dimulai sub-string paling kecil. Berikut langkah-langkah algoritma CYK:
+1. Membagi string menjadi sub-string terkecil yaitu berupa karakter.
+2. Menentukan setiap sub-string dalam bentuk Non-Terminal.
+3. Gabungkan dua sub-string untuk membentuk substring baru.
+4. Tentukan kembali sub-string baru dalam bentuk Non-Terminal.
+5. Penentuan sub-string dalam bentuk Non-Terminal dilakukan terus-menerus hingga mencapai sub-string terbesar atau string awal. 
 
 #### Penjelasan Kode
 
