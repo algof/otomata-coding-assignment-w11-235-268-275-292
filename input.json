@@ -1,0 +1,14 @@
+{
+  "non_terminals": ["NP", "Nom", "Det", "AP", "Adv", "A"],
+  "terminals": ["book", "orange", "man", "tall", "heavy", "very", "muscular"],
+  "production_rules": {
+    "NP": [["Det", "Nom"]],
+    "Nom": [["AP", "Nom"], ["book"], ["orange"], ["man"]],
+    "AP": [["Adv", "A"], ["heavy"], ["orange"], ["tall"]],
+    "Det": [["a"]],
+    "Adv": [["very"], ["extremely"]],
+    "A": [["heavy"], ["orange"], ["tall"], ["muscular"]]
+  },
+  "start_symbol": "NP",
+  "sentence": ["a", "very", "heavy", "orange", "book"]
+}
